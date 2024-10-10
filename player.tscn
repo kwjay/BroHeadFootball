@@ -1,21 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj7ne4gk2vm3s"]
+[gd_scene load_steps=6 format=3 uid="uid://bj7ne4gk2vm3s"]
 
 [ext_resource type="Texture2D" uid="uid://c5ib4d4wcxj14" path="res://sprites/american-football.png" id="1_k23as"]
 [ext_resource type="Script" path="res://player.gd" id="1_x3h62"]
 [ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://sprites/basket-ball.png" id="2_bnub6"]
-[ext_resource type="Script" path="res://foot.gd" id="3_wgrua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3rso"]
 radius = 31.0161
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3o0jh"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjecp"]
+radius = 16.3694
+height = 47.1218
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
 slide_on_ceiling = false
 script = ExtResource("1_x3h62")
 
-[node name="Spirte" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_bnub6")
@@ -24,18 +25,16 @@ texture = ExtResource("2_bnub6")
 shape = SubResource("CircleShape2D_j3rso")
 
 [node name="Foot" type="CharacterBody2D" parent="."]
-position = Vector2(-32, 28)
-rotation = -0.837758
 collision_layer = 2
 collision_mask = 2
-motion_mode = 1
-script = ExtResource("3_wgrua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
+position = Vector2(-33, 37)
+rotation = -0.977384
+shape = SubResource("CapsuleShape2D_hjecp")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Foot"]
-shape = SubResource("CapsuleShape2D_3o0jh")
-
-[node name="Sprite" type="Sprite2D" parent="Foot"]
-rotation = 1.53589
-scale = Vector2(0.02, 0.02)
+[node name="Sprite" type="Sprite2D" parent="Foot/CollisionShape2D"]
+rotation = 1.5708
+scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_k23as")
