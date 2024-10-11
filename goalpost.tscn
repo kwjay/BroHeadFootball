@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://der5fa0r8puqx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c31j"]
+size = Vector2(39.5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk4eu"]
+size = Vector2(25, 30)
+
+[node name="Goalpost" type="StaticBody2D"]
+
+[node name="Crossbar" type="CollisionShape2D" parent="."]
+position = Vector2(20.25, -3)
+shape = SubResource("RectangleShape2D_0c31j")
+
+[node name="GoalArea" type="Area2D" parent="."]
+
+[node name="GoalCollider" type="CollisionShape2D" parent="GoalArea"]
+position = Vector2(21.5, 15)
+shape = SubResource("RectangleShape2D_jk4eu")
