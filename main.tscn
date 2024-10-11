@@ -1,10 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://xqk8ympye4bm"]
+[gd_scene load_steps=7 format=3 uid="uid://xqk8ympye4bm"]
 
 [ext_resource type="PackedScene" uid="uid://bj7ne4gk2vm3s" path="res://player.tscn" id="3_idkvo"]
 [ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://football.tscn" id="3_ix164"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1nnm"]
-size = Vector2(1177, 54)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfsv7"]
+size = Vector2(1170, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pn3pc"]
+size = Vector2(143, 609.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4emr7"]
+size = Vector2(135.75, 609.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxb5f"]
+size = Vector2(1239, 129.5)
 
 [node name="Main" type="Node2D"]
 
@@ -15,14 +24,21 @@ metadata/_edit_group_ = true
 [node name="Body" parent="." instance=ExtResource("3_ix164")]
 position = Vector2(510, 211)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Stadium" type="StaticBody2D" parent="."]
+position = Vector2(532, 595)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(573.5, 622)
-shape = SubResource("RectangleShape2D_s1nnm")
+[node name="Ground" type="CollisionShape2D" parent="Stadium"]
+position = Vector2(46, 40)
+shape = SubResource("RectangleShape2D_tfsv7")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
-offset_left = 5.0
-offset_top = 599.0
-offset_right = 1158.0
-offset_bottom = 655.0
+[node name="LeftWall" type="CollisionShape2D" parent="Stadium"]
+position = Vector2(-604.5, -297.25)
+shape = SubResource("RectangleShape2D_pn3pc")
+
+[node name="RightWall" type="CollisionShape2D" parent="Stadium"]
+position = Vector2(689.125, -295.25)
+shape = SubResource("RectangleShape2D_4emr7")
+
+[node name="Sky" type="CollisionShape2D" parent="Stadium"]
+position = Vector2(41.5, -661.25)
+shape = SubResource("RectangleShape2D_mxb5f")
