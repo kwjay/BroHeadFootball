@@ -1,9 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlk70oa00mj0p"]
+[gd_scene load_steps=6 format=3 uid="uid://dlk70oa00mj0p"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6i4u0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbd8s"]
-size = Vector2(1281, 78)
+[ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://goal_post.tscn" id="1_i08dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
 size = Vector2(64, 526)
@@ -11,16 +8,12 @@ size = Vector2(64, 526)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttip5"]
 size = Vector2(1281, 70)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6i4u0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbd8s"]
+size = Vector2(1281, 78)
+
 [node name="Stadium" type="Node2D"]
-
-[node name="Ground" type="StaticBody2D" parent="."]
-collision_layer = 5
-collision_mask = 0
-physics_material_override = SubResource("PhysicsMaterial_6i4u0")
-
-[node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
-position = Vector2(576.5, 565)
-shape = SubResource("RectangleShape2D_nbd8s")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 5
@@ -41,3 +34,33 @@ collision_mask = 0
 [node name="UpperCollider" type="CollisionShape2D" parent="Sky"]
 position = Vector2(576.5, -35)
 shape = SubResource("RectangleShape2D_ttip5")
+
+[node name="LeftGoalPost" parent="." instance=ExtResource("1_i08dr")]
+position = Vector2(135, 339)
+
+[node name="RightGoalPost" parent="." instance=ExtResource("1_i08dr")]
+position = Vector2(1015, 340)
+scale = Vector2(-1, 1)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_6i4u0")
+
+[node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
+position = Vector2(576.5, 565)
+shape = SubResource("RectangleShape2D_nbd8s")
+
+[node name="Grass" type="ColorRect" parent="Ground"]
+offset_left = -63.0
+offset_top = 523.0
+offset_right = 1215.0
+offset_bottom = 589.0
+color = Color(0, 0.564706, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Ground"]
+offset_left = -64.0
+offset_top = 581.0
+offset_right = 1216.0
+offset_bottom = 653.0
+color = Color(0.39167, 0.111726, 0, 1)

@@ -7,10 +7,12 @@
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_idkvo")]
+z_index = 1
 position = Vector2(177, 380)
 metadata/_edit_group_ = true
 
 [node name="Body" parent="." instance=ExtResource("3_ix164")]
+z_index = 1
 position = Vector2(510, 211)
 
 [node name="Stadium" parent="." instance=ExtResource("3_twgj0")]
