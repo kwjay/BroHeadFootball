@@ -3,24 +3,36 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
 var PUSH_FORCE = 80.0
+@export var WSAD = false
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+var jump = "jump"
+var kick = "kick"
+var left = "left"
+var right = "right"
+
+func _ready():
+	if WSAD:
+		jump += "2"
+		kick += "2"
+		left += "2"
+		right += "2"
 
 func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed(jump) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_pressed("kick") and $"Foot".rotation > -2.5:
+	if Input.is_action_pressed(kick) and $"Foot".rotation > -2.5:
 		$"Foot".rotation -= 20 * delta
-	elif $"Foot".rotation < 0 and !Input.is_action_pressed("kick"):
+	elif $"Foot".rotation < 0 and !Input.is_action_pressed(kick):
 		$"Foot".rotation += 10 * delta
 	
-	var direction = Input.get_axis("left", "right")
+	var direction = Input.get_axis(left, right)
 	if direction:
 		velocity.x = direction * SPEED
 	else:
