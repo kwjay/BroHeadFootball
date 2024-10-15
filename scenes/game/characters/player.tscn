@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bj7ne4gk2vm3s"]
 
-[ext_resource type="Texture2D" uid="uid://c5ib4d4wcxj14" path="res://sprites/american-football.png" id="1_k23as"]
-[ext_resource type="Script" path="res://player.gd" id="1_x3h62"]
-[ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://sprites/basket-ball.png" id="2_bnub6"]
+[ext_resource type="Texture2D" uid="uid://c5ib4d4wcxj14" path="res://assets/sprites/american-football.png" id="1_k23as"]
+[ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
+[ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="2_bnub6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3rso"]
 radius = 31.0161

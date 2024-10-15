@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://i6bcqweb8ovo"]
 
-[ext_resource type="Script" path="res://goal_post.gd" id="1_nov8v"]
+[ext_resource type="Script" path="res://scenes/game/objects/goal_post.gd" id="1_nov8v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkoe5"]
 radius = 6.34534

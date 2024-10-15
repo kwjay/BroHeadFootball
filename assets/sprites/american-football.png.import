@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c32pd4je2rmkk"
-path="res://.godot/imported/grassblock2.png-ee4702c1cc5e5b25784ff6a0b9d99e2e.ctex"
+uid="uid://c5ib4d4wcxj14"
+path="res://.godot/imported/american-football.png-931ec4cbc46f16bb8aa5abd82256b202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grassblock2.png"
-dest_files=["res://.godot/imported/grassblock2.png-ee4702c1cc5e5b25784ff6a0b9d99e2e.ctex"]
+source_file="res://assets/sprites/american-football.png"
+dest_files=["res://.godot/imported/american-football.png-931ec4cbc46f16bb8aa5abd82256b202.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://rkoyv5puf1ae"]
 
-[ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://sprites/football.png" id="1_gdggo"]
+[ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://assets/sprites/football.png" id="1_gdggo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xp08c"]
 bounce = 0.64

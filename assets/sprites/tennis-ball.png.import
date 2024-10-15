@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ib4d4wcxj14"
-path="res://.godot/imported/american-football.png-300c436acbd619328091fa7e812b4627.ctex"
+uid="uid://8b33w3gttplg"
+path="res://.godot/imported/tennis-ball.png-d4b29162a6ce8a5a606363039061da90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/american-football.png"
-dest_files=["res://.godot/imported/american-football.png-300c436acbd619328091fa7e812b4627.ctex"]
+source_file="res://assets/sprites/tennis-ball.png"
+dest_files=["res://.godot/imported/tennis-ball.png-d4b29162a6ce8a5a606363039061da90.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlk70oa00mj0p"]
 
-[ext_resource type="Script" path="res://stadium.gd" id="1_0i6nw"]
-[ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://goal_post.tscn" id="1_i08dr"]
+[ext_resource type="Script" path="res://scenes/game/areas/stadium.gd" id="1_lpk1j"]
+[ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://scenes/game/objects/goal_post.tscn" id="2_87bb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
 size = Vector2(64, 526)
@@ -15,7 +15,7 @@ size = Vector2(1281, 70)
 size = Vector2(1281, 78)
 
 [node name="Stadium" type="Node2D"]
-script = ExtResource("1_0i6nw")
+script = ExtResource("1_lpk1j")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 5
@@ -37,10 +37,10 @@ collision_mask = 0
 position = Vector2(576.5, -35)
 shape = SubResource("RectangleShape2D_ttip5")
 
-[node name="LeftGoalpost" parent="." instance=ExtResource("1_i08dr")]
+[node name="LeftGoalpost" parent="." instance=ExtResource("2_87bb7")]
 position = Vector2(135, 339)
 
-[node name="RightGoalpost" parent="." instance=ExtResource("1_i08dr")]
+[node name="RightGoalpost" parent="." instance=ExtResource("2_87bb7")]
 position = Vector2(1015, 340)
 scale = Vector2(-1, 1)
 
