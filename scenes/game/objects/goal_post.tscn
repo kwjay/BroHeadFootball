@@ -1,44 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://i6bcqweb8ovo"]
+[gd_scene load_steps=6 format=3 uid="uid://i6bcqweb8ovo"]
 
 [ext_resource type="Script" path="res://scenes/game/objects/goal_post.gd" id="1_nov8v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkoe5"]
-radius = 6.34534
-height = 201.947
+radius = 3.29446
+height = 101.979
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5gwc"]
-size = Vector2(190.5, 28)
+size = Vector2(92.2403, 14.7866)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuxlh"]
-size = Vector2(169, 185)
+size = Vector2(56, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2f16w"]
+size = Vector2(10, 158)
 
 [node name="GoalPost" type="Node2D"]
 script = ExtResource("1_nov8v")
 
 [node name="Crossbar" type="StaticBody2D" parent="."]
+position = Vector2(0, 20)
+rotation = -0.23911
+collision_mask = 5
 
 [node name="CrossbarCollider" type="CollisionShape2D" parent="Crossbar"]
-position = Vector2(-42, -9)
+position = Vector2(4.33567, -5.11878)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_mkoe5")
 
 [node name="ColorRect" type="ColorRect" parent="Crossbar"]
-offset_left = -140.0
-offset_top = -14.0
-offset_right = 55.0
+offset_left = -45.0
+offset_top = -8.0
+offset_right = 56.0
 offset_bottom = -2.0
 
 [node name="SweepArea" type="Area2D" parent="Crossbar"]
 
 [node name="SweepAreaCollider" type="CollisionShape2D" parent="Crossbar/SweepArea"]
-position = Vector2(-42, -32)
+position = Vector2(8.44236, -17.3933)
 shape = SubResource("RectangleShape2D_p5gwc")
 
 [node name="Post" type="ColorRect" parent="."]
-offset_left = 38.0
-offset_top = -8.0
-offset_right = 48.0
-offset_bottom = 192.0
+offset_left = 41.0
+offset_top = 5.0
+offset_right = 51.0
+offset_bottom = 185.0
 metadata/_edit_use_anchors_ = true
 
 [node name="GoalArea" type="Area2D" parent="."]
@@ -46,7 +52,21 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="GoalAreaCollider" type="CollisionShape2D" parent="GoalArea"]
-position = Vector2(-52.5, 93.5)
+position = Vector2(4, 109)
 shape = SubResource("RectangleShape2D_tuxlh")
+
+[node name="InnerPost" type="StaticBody2D" parent="."]
+position = Vector2(-37, 70)
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InnerPost"]
+position = Vector2(-3, 37)
+shape = SubResource("RectangleShape2D_2f16w")
+
+[node name="ColorRect" type="ColorRect" parent="InnerPost"]
+offset_left = -5.0
+offset_top = -42.0
+offset_right = 1.0
+offset_bottom = 116.0
 
 [connection signal="body_entered" from="GoalArea" to="." method="_on_goal_area_body_entered"]

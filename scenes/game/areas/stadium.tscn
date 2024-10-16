@@ -12,7 +12,7 @@ size = Vector2(1281, 70)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6i4u0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbd8s"]
-size = Vector2(1281, 78)
+size = Vector2(1281, 116)
 
 [node name="Stadium" type="Node2D"]
 script = ExtResource("1_lpk1j")
@@ -38,10 +38,10 @@ position = Vector2(576.5, -35)
 shape = SubResource("RectangleShape2D_ttip5")
 
 [node name="LeftGoalpost" parent="." instance=ExtResource("2_87bb7")]
-position = Vector2(135, 339)
+position = Vector2(52, 297)
 
 [node name="RightGoalpost" parent="." instance=ExtResource("2_87bb7")]
-position = Vector2(1015, 340)
+position = Vector2(1100, 296)
 scale = Vector2(-1, 1)
 
 [node name="Ground" type="StaticBody2D" parent="."]
@@ -50,19 +50,19 @@ collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_6i4u0")
 
 [node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
-position = Vector2(576.5, 565)
+position = Vector2(576.5, 546)
 shape = SubResource("RectangleShape2D_nbd8s")
 
 [node name="Grass" type="ColorRect" parent="Ground"]
 offset_left = -63.0
-offset_top = 523.0
+offset_top = 479.0
 offset_right = 1215.0
-offset_bottom = 589.0
+offset_bottom = 515.0
 color = Color(0, 0.564706, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="Ground"]
 offset_left = -64.0
-offset_top = 581.0
+offset_top = 516.0
 offset_right = 1216.0
 offset_bottom = 653.0
 color = Color(0.39167, 0.111726, 0, 1)

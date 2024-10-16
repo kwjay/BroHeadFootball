@@ -1,7 +1,8 @@
 extends Control
 
 func _on_play_pressed():
-	print_debug("play pressed")
+	get_tree().change_scene_to_file("res://scenes/game/game.tscn")
+	self.queue_free()
 
 
 func _on_help_pressed():
