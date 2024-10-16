@@ -1,12 +1,11 @@
 extends Node2D
 
 signal goal_scored(team)
-func _ready():
-	$LeftGoalpost.goal_area_entered.connect(_on_Goal_Scored)
-	$RightGoalpost.goal_area_entered.connect(_on_Goal_Scored)
 
 func _on_Goal_Scored(goalpost):
 	if goalpost == "LeftGoalpost":
 		emit_signal("goal_scored", "2")
+		print_debug("HERE")
 	elif goalpost == "RightGoalpost":
 		emit_signal("goal_scored", "1")
+		print_debug("HERE")

@@ -69,4 +69,5 @@ offset_top = -42.0
 offset_right = 1.0
 offset_bottom = 116.0
 
+[connection signal="body_entered" from="Crossbar/SweepArea" to="." method="_on_sweep_area_body_entered"]
 [connection signal="body_entered" from="GoalArea" to="." method="_on_goal_area_body_entered"]
