@@ -3,7 +3,7 @@ extends Node2D
 @onready var ball_scene = preload("res://scenes/game/objects/football.tscn")
 var ball_position
 var PLAYER1_POSITION = Vector2(234, 440)
-var PLAYER2_POSiTION = Vector2(879, 440) 
+var PLAYER2_POSiTION = Vector2(879, 440)
 
 func _ready():
 	$Stadium.goal_scored.connect(_on_stadium_goal_scored)
