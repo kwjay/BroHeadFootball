@@ -36,11 +36,11 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	handle_foot_rotation(delta)
+	handle_kick_action(delta)
 	move_and_slide()
 	apply_collision_impulse()
 	
-func handle_foot_rotation(delta):
+func handle_kick_action(delta):
 	var foot = $"Foot"
 	if Input.is_action_pressed(player_controls["kick"]) and foot.rotation > FOOT_MAX_ROTATION:
 		foot.rotation -= FOOT_KICK_SPEED * delta

@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3rso"]
 radius = 31.0161
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjocr"]
-size = Vector2(9.04298, 36.8736)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_khoiw"]
+radius = 6.37933
+height = 34.2765
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 5
@@ -28,14 +29,12 @@ texture = ExtResource("2_bnub6")
 shape = SubResource("CircleShape2D_j3rso")
 
 [node name="Foot" type="CharacterBody2D" parent="."]
+disable_mode = 2
 collision_layer = 3
 collision_mask = 4
 motion_mode = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
-position = Vector2(-31.6538, 37.6937)
-rotation = -0.724312
-shape = SubResource("RectangleShape2D_yjocr")
+platform_on_leave = 2
+platform_floor_layers = 4294967040
 
 [node name="ColorRect" type="ColorRect" parent="Foot"]
 offset_left = -47.0
@@ -52,3 +51,8 @@ offset_right = -12.0
 offset_bottom = 26.0
 rotation = 0.785398
 color = Color(1, 1, 0.294118, 0.372549)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
+position = Vector2(-35, 29)
+rotation = -0.760964
+shape = SubResource("CapsuleShape2D_khoiw")
