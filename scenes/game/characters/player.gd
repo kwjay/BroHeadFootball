@@ -2,10 +2,13 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
-var PUSH_FORCE = 80.0
+const PUSH_FORCE = 100.0
 @export var WSAD = false
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const FOOT_MAX_ROTATION = -2.5
+const FOOT_RESET_SPEED = 10.0
+const FOOT_KICK_SPEED = 20.0
 
 var jump = "jump"
 var kick = "kick"
@@ -23,23 +26,31 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
 	if Input.is_action_just_pressed(jump) and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
-	if Input.is_action_pressed(kick) and $"Foot".rotation > -2.5:
-		$"Foot".rotation -= 20 * delta
-	elif $"Foot".rotation < 0 and !Input.is_action_pressed(kick):
-		$"Foot".rotation += 10 * delta
-	
+
 	var direction = Input.get_axis(left, right)
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	handle_foot_rotation(delta)
 	move_and_slide()
+	apply_collision_impulse()
 	
+
+func handle_foot_rotation(delta):
+	var foot = $"Foot"
+	if Input.is_action_pressed(kick) and foot.rotation > FOOT_MAX_ROTATION:
+		foot.rotation -= FOOT_KICK_SPEED * delta
+	elif foot.rotation < 0 and not Input.is_action_pressed(kick):
+		foot.rotation += FOOT_RESET_SPEED * delta
+		
+func apply_collision_impulse():
 	for i in get_slide_collision_count():
 		var slide_collision = get_slide_collision(i)
 		if slide_collision.get_collider() is RigidBody2D:
-			slide_collision.get_collider().apply_central_impulse(-slide_collision.get_normal() * PUSH_FORCE)
+			var collider = slide_collision.get_collider()
+			var collision_normal = slide_collision.get_normal()
+			collider.apply_central_impulse(-collision_normal * PUSH_FORCE)

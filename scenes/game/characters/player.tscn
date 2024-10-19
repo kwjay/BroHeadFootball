@@ -1,15 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bj7ne4gk2vm3s"]
+[gd_scene load_steps=5 format=3 uid="uid://bj7ne4gk2vm3s"]
 
-[ext_resource type="Texture2D" uid="uid://c5ib4d4wcxj14" path="res://assets/sprites/american-football.png" id="1_k23as"]
 [ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
 [ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="2_bnub6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3rso"]
 radius = 31.0161
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjecp"]
-radius = 12.7639
-height = 47.1218
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjocr"]
+size = Vector2(9.04298, 36.8736)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 5
@@ -35,13 +33,22 @@ collision_mask = 4
 motion_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
-position = Vector2(-29, 34)
-rotation = -0.977384
-shape = SubResource("CapsuleShape2D_hjecp")
-metadata/_edit_group_ = true
+position = Vector2(-31.6538, 37.6937)
+rotation = -0.724312
+shape = SubResource("RectangleShape2D_yjocr")
 
-[node name="Sprite" type="Sprite2D" parent="Foot/CollisionShape2D"]
-modulate = Color(0, 0, 0, 0.482353)
-rotation = 1.5708
-scale = Vector2(0.025, 0.025)
-texture = ExtResource("1_k23as")
+[node name="ColorRect" type="ColorRect" parent="Foot"]
+offset_left = -47.0
+offset_top = 26.0
+offset_right = -40.0
+offset_bottom = 63.0
+rotation = -0.715585
+color = Color(0.833705, 0.745641, 0.995211, 0.403922)
+
+[node name="ColorRect2" type="ColorRect" parent="Foot"]
+offset_left = -37.0
+offset_top = 17.0
+offset_right = -12.0
+offset_bottom = 26.0
+rotation = 0.785398
+color = Color(1, 1, 0.294118, 0.372549)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://xqk8ympye4bm"]
+[gd_scene load_steps=5 format=3 uid="uid://xqk8ympye4bm"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_gts3p"]
 [ext_resource type="PackedScene" uid="uid://bj7ne4gk2vm3s" path="res://scenes/game/characters/player.tscn" id="2_4fyk2"]
+[ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://scenes/game/objects/football.tscn" id="4_romis"]
 [ext_resource type="PackedScene" uid="uid://dlk70oa00mj0p" path="res://scenes/game/areas/stadium.tscn" id="4_vqao8"]
 
 [node name="Game" type="Node2D"]
@@ -18,6 +19,8 @@ position = Vector2(-2, -5)
 position = Vector2(879, 440)
 scale = Vector2(-1, 1)
 WSAD = true
+
+[node name="Ball" parent="." instance=ExtResource("4_romis")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
