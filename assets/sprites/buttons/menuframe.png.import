@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfhvmnkdssdcb"
-path="res://.godot/imported/base-ball.png-7c1001bd774c3cdf6be4a7a37994572d.ctex"
+uid="uid://dqpy4oyy8ppr6"
+path="res://.godot/imported/menuframe.png-29458b4eaa70c1ca2b7d3bad5c5d3aff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/base-ball.png"
-dest_files=["res://.godot/imported/base-ball.png-7c1001bd774c3cdf6be4a7a37994572d.ctex"]
+source_file="res://assets/sprites/buttons/menuframe.png"
+dest_files=["res://.godot/imported/menuframe.png-29458b4eaa70c1ca2b7d3bad5c5d3aff.ctex"]
 
 [params]
 

@@ -7,8 +7,12 @@
 script = ExtResource("1_n43tj")
 
 [node name="Menu" parent="." instance=ExtResource("2_qs4lb")]
-offset_left = 435.5
-offset_top = 400.0
-offset_right = 435.5
-offset_bottom = 400.0
-size_flags_horizontal = 4
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 576.0
+offset_top = 430.0
+offset_right = 576.0
+offset_bottom = 430.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8b33w3gttplg"
-path="res://.godot/imported/tennis-ball.png-d4b29162a6ce8a5a606363039061da90.ctex"
+uid="uid://crguk5lso1xwn"
+path="res://.godot/imported/quitbutton.png-b17b014887bf5b61b52563d1f9007227.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tennis-ball.png"
-dest_files=["res://.godot/imported/tennis-ball.png-d4b29162a6ce8a5a606363039061da90.ctex"]
+source_file="res://assets/sprites/buttons/quitbutton.png"
+dest_files=["res://.godot/imported/quitbutton.png-b17b014887bf5b61b52563d1f9007227.ctex"]
 
 [params]
 

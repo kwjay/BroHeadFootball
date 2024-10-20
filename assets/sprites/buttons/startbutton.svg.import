@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqdbakigwd67q"
-path="res://.godot/imported/volley-ball.png-5892554ae88fd6fce622d82f9a3e2575.ctex"
+uid="uid://6yg6klxw7bow"
+path="res://.godot/imported/startbutton.svg-e041e789c2ea21ec6d53ab0fd44c57b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/volley-ball.png"
-dest_files=["res://.godot/imported/volley-ball.png-5892554ae88fd6fce622d82f9a3e2575.ctex"]
+source_file="res://assets/sprites/buttons/startbutton.svg"
+dest_files=["res://.godot/imported/startbutton.svg-e041e789c2ea21ec6d53ab0fd44c57b9.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
