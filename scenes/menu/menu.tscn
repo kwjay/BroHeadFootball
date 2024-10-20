@@ -37,7 +37,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_cdy8l")
 icon = ExtResource("3_nrs8i")
-flat = true
 icon_alignment = 1
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -45,7 +44,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_cdy8l")
 icon = ExtResource("4_3ubi0")
-flat = true
 icon_alignment = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

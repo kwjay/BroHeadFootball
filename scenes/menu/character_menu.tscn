@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpngqqe22p121"]
+[gd_scene load_steps=7 format=3 uid="uid://cpngqqe22p121"]
 
+[ext_resource type="Theme" uid="uid://h46sc2ncbrw7" path="res://assets/themes/game_theme.tres" id="1_56uud"]
+[ext_resource type="Texture2D" uid="uid://b8uj10lquygys" path="res://assets/sprites/buttons/leftarrow.png" id="1_nplth"]
 [ext_resource type="Texture2D" uid="uid://c32pd4je2rmkk" path="res://assets/sprites/grassblock2.png" id="1_tbk6r"]
+[ext_resource type="Texture2D" uid="uid://eip4omcyvlhr" path="res://assets/sprites/buttons/rightarrow.png" id="3_n5b3k"]
+[ext_resource type="Texture2D" uid="uid://doaflsnoo14wn" path="res://assets/sprites/buttons/backbutton.png" id="5_fjtwy"]
+[ext_resource type="Texture2D" uid="uid://cydmbfxumvact" path="res://assets/sprites/buttons/playbutton.png" id="6_6dfok"]
 
 [node name="CharacterMenu" type="Control"]
 layout_mode = 3
@@ -26,9 +31,8 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-text = "<"
-icon = ExtResource("1_tbk6r")
-flat = true
+theme = ExtResource("1_56uud")
+icon = ExtResource("1_nplth")
 icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer/HBoxContainer"]
@@ -37,7 +41,8 @@ texture = ExtResource("1_tbk6r")
 
 [node name="Button2" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-icon = ExtResource("1_tbk6r")
+theme = ExtResource("1_56uud")
+icon = ExtResource("3_n5b3k")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -59,12 +64,17 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_56uud")
+icon = ExtResource("1_nplth")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("1_tbk6r")
 
 [node name="Button2" type="Button" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_56uud")
+icon = ExtResource("3_n5b3k")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -73,14 +83,19 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
+offset_left = -522.0
+offset_top = -148.0
+offset_right = 506.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Button" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_56uud")
+icon = ExtResource("5_fjtwy")
 
 [node name="Button2" type="Button" parent="HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_56uud")
+icon = ExtResource("6_6dfok")
