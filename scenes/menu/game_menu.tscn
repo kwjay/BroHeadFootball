@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://qogh4difjl7u"]
+
+[ext_resource type="Theme" uid="uid://h46sc2ncbrw7" path="res://assets/themes/game_theme.tres" id="1_vo6o6"]
+[ext_resource type="Texture2D" uid="uid://cn1xch2h75dxu" path="res://assets/sprites/buttons/pausebutton.png" id="2_07vjq"]
+
+[node name="GameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -118.0
+offset_right = 390.0
+offset_bottom = -17.0
+grow_vertical = 0
+theme = ExtResource("1_vo6o6")
+
+[node name="TimeLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vo6o6")
+text = "00:00"
+
+[node name="ScoreLabel" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vo6o6")
+text = "0:0"
+
+[node name="Pause" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vo6o6")
+theme_type_variation = &"GameButtons"
+toggle_mode = true
+text = "               "
+icon = ExtResource("2_07vjq")
+icon_alignment = 1
+
+[node name="Button" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = "|\\>"
+
+[node name="Menu" type="Button" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = "MENU"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = -41.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0

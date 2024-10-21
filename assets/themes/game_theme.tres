@@ -1,4 +1,7 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://h46sc2ncbrw7"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://h46sc2ncbrw7"]
+
+[ext_resource type="FontFile" uid="uid://dmgebvfbnnmm5" path="res://assets/fonts/prstart.ttf" id="2_dqkle"]
+[ext_resource type="Texture2D" uid="uid://dqpy4oyy8ppr6" path="res://assets/sprites/buttons/menuframe.png" id="3_oneus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3klie"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -17,6 +20,13 @@ border_color = Color(0.8, 0.8, 0.8, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ll5lv"]
+texture = ExtResource("3_oneus")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
 [resource]
 Button/colors/icon_hover_color = Color(0.854902, 0.854902, 0.854902, 1)
 Button/colors/icon_hover_pressed_color = Color(0.854902, 0.854902, 0.854902, 1)
@@ -27,3 +37,20 @@ Button/styles/focus = SubResource("StyleBoxFlat_3klie")
 Button/styles/hover = SubResource("StyleBoxFlat_x20ds")
 Button/styles/normal = SubResource("StyleBoxFlat_w55yq")
 Button/styles/pressed = SubResource("StyleBoxFlat_vy3rd")
+GameButtons/base_type = &"Button"
+GameButtons/colors/icon_hover_color = Color(0.854634, 0.854634, 0.854634, 1)
+GameButtons/colors/icon_hover_pressed_color = Color(0.448067, 0.448067, 0.448067, 1)
+GameButtons/colors/icon_pressed_color = Color(0.326679, 0.326679, 0.326679, 1)
+GameButtons/constants/icon_max_width = 100
+HBoxContainer/constants/separation = 50
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(1, 1, 1, 1)
+Label/constants/line_spacing = 0
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+Label/font_sizes/font_size = 60
+Label/fonts/font = ExtResource("2_dqkle")
+Label/styles/normal = SubResource("StyleBoxTexture_ll5lv")

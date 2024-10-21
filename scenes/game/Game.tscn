@@ -1,72 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://xqk8ympye4bm"]
+[gd_scene load_steps=3 format=3 uid="uid://xqk8ympye4bm"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_gts3p"]
-[ext_resource type="PackedScene" uid="uid://bj7ne4gk2vm3s" path="res://scenes/game/characters/player.tscn" id="2_4fyk2"]
-[ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://scenes/game/objects/football.tscn" id="4_romis"]
-[ext_resource type="PackedScene" uid="uid://dlk70oa00mj0p" path="res://scenes/game/areas/stadium.tscn" id="4_vqao8"]
+[ext_resource type="PackedScene" uid="uid://qogh4difjl7u" path="res://scenes/menu/game_menu.tscn" id="2_mffrk"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gts3p")
 
-[node name="Player1" parent="." instance=ExtResource("2_4fyk2")]
-z_index = 1
-position = Vector2(234, 440)
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
 
-[node name="Stadium" parent="." instance=ExtResource("4_vqao8")]
-position = Vector2(-2, -5)
+[node name="GameMenu" parent="." instance=ExtResource("2_mffrk")]
+offset_left = 1152.0
+offset_top = 648.0
+offset_right = 1152.0
+offset_bottom = 648.0
 
-[node name="Player2" parent="." instance=ExtResource("2_4fyk2")]
-position = Vector2(879, 440)
-scale = Vector2(-1, 1)
-WSAD = true
-
-[node name="Ball" parent="." instance=ExtResource("4_romis")]
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Score1" type="Label" parent="UI"]
-offset_left = 477.0
-offset_top = 554.0
-offset_right = 568.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 70
-text = "0"
-horizontal_alignment = 2
-
-[node name="Score2" type="Label" parent="UI"]
-offset_left = 589.0
-offset_top = 554.0
-offset_right = 670.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 70
-text = "0
-"
-
-[node name="Score" type="Label" parent="UI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -30.0
-offset_top = -101.0
-offset_right = 30.0
-offset_bottom = -78.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "SCORES"
-
-[node name="Colon" type="Label" parent="UI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -83.0
-offset_right = 34.0
-offset_bottom = -14.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 50
-text = ":"
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
