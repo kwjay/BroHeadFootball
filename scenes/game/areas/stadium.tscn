@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlk70oa00mj0p"]
+[gd_scene load_steps=6 format=3 uid="uid://dlk70oa00mj0p"]
 
-[ext_resource type="Script" path="res://scenes/game/areas/stadium.gd" id="1_lpk1j"]
-[ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://scenes/game/objects/goal_post.tscn" id="2_87bb7"]
+[ext_resource type="Texture2D" uid="uid://dfkt2m5n3dahn" path="res://assets/sprites/grassblock.png" id="3_0ljpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
 size = Vector2(64, 526)
@@ -12,10 +11,9 @@ size = Vector2(1281, 70)
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6i4u0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbd8s"]
-size = Vector2(1281, 116)
+size = Vector2(1281, 206)
 
 [node name="Stadium" type="Node2D"]
-script = ExtResource("1_lpk1j")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 5
@@ -37,35 +35,19 @@ collision_mask = 0
 position = Vector2(576.5, -35)
 shape = SubResource("RectangleShape2D_ttip5")
 
-[node name="LeftGoalpost" parent="." instance=ExtResource("2_87bb7")]
-position = Vector2(52, 297)
-
-[node name="RightGoalpost" parent="." instance=ExtResource("2_87bb7")]
-position = Vector2(1100, 296)
-scale = Vector2(-1, 1)
-
 [node name="Ground" type="StaticBody2D" parent="."]
+z_index = -1
+position = Vector2(600, 640)
 collision_layer = 5
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_6i4u0")
+metadata/_edit_group_ = true
 
 [node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
-position = Vector2(576.5, 546)
+position = Vector2(0, -45)
 shape = SubResource("RectangleShape2D_nbd8s")
 
-[node name="Grass" type="ColorRect" parent="Ground"]
-offset_left = -63.0
-offset_top = 479.0
-offset_right = 1215.0
-offset_bottom = 515.0
-color = Color(0, 0.564706, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="Ground"]
-offset_left = -64.0
-offset_top = 516.0
-offset_right = 1216.0
-offset_bottom = 653.0
-color = Color(0.39167, 0.111726, 0, 1)
-
-[connection signal="goal_area_entered" from="LeftGoalpost" to="." method="_on_Goal_Scored"]
-[connection signal="goal_area_entered" from="RightGoalpost" to="." method="_on_Goal_Scored"]
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(-25, -20)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("3_0ljpa")

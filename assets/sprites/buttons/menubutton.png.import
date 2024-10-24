@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c32pd4je2rmkk"
-path="res://.godot/imported/grassblock2.png-069b0e09e476f82364498120aa905183.ctex"
+uid="uid://db6yrqndge02c"
+path="res://.godot/imported/menubutton.png-178c89dfbbf5170469df44b16049d4f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/grassblock2.png"
-dest_files=["res://.godot/imported/grassblock2.png-069b0e09e476f82364498120aa905183.ctex"]
+source_file="res://assets/sprites/buttons/menubutton.png"
+dest_files=["res://.godot/imported/menubutton.png-178c89dfbbf5170469df44b16049d4f3.ctex"]
 
 [params]
 

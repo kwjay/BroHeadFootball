@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://qogh4difjl7u"]
+[gd_scene load_steps=6 format=3 uid="uid://qogh4difjl7u"]
 
+[ext_resource type="Script" path="res://scenes/menu/game_menu.gd" id="1_motn4"]
 [ext_resource type="Theme" uid="uid://h46sc2ncbrw7" path="res://assets/themes/game_theme.tres" id="1_vo6o6"]
 [ext_resource type="Texture2D" uid="uid://cn1xch2h75dxu" path="res://assets/sprites/buttons/pausebutton.png" id="2_07vjq"]
+[ext_resource type="Texture2D" uid="uid://dogx4muiqk3l4" path="res://assets/sprites/buttons/soundbutton.png" id="3_nhwov"]
+[ext_resource type="Texture2D" uid="uid://db6yrqndge02c" path="res://assets/sprites/buttons/menubutton.png" id="4_gukq3"]
 
 [node name="GameMenu" type="Control"]
 layout_mode = 3
@@ -12,18 +15,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
+script = ExtResource("1_motn4")
 
 [node name="UI" type="CanvasLayer" parent="."]
+offset = Vector2(0, -20)
+transform = Transform2D(1, 0, 0, 1, 0, -20)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI"]
-anchors_preset = 2
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -118.0
-offset_right = 390.0
-offset_bottom = -17.0
+offset_left = -461.0
+offset_top = -78.0
+offset_right = 777.0
+offset_bottom = 23.0
+grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 theme = ExtResource("1_vo6o6")
 
 [node name="TimeLabel" type="Label" parent="UI/HBoxContainer"]
@@ -36,7 +46,12 @@ layout_mode = 2
 theme = ExtResource("1_vo6o6")
 text = "0:0"
 
-[node name="Pause" type="Button" parent="UI/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_vo6o6")
+theme_type_variation = &"GameButtonsHBox"
+
+[node name="Pause" type="Button" parent="UI/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_vo6o6")
 theme_type_variation = &"GameButtons"
@@ -45,24 +60,22 @@ text = "               "
 icon = ExtResource("2_07vjq")
 icon_alignment = 1
 
-[node name="Button" type="Button" parent="UI/HBoxContainer"]
+[node name="Sound" type="Button" parent="UI/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "|\\>"
+theme = ExtResource("1_vo6o6")
+theme_type_variation = &"GameButtons"
+toggle_mode = true
+icon = ExtResource("3_nhwov")
 
-[node name="Menu" type="Button" parent="UI/HBoxContainer"]
+[node name="Menu" type="Button" parent="UI/HBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_vo6o6")
+theme_type_variation = &"GameMenuButtons"
 text = "MENU"
+icon = ExtResource("4_gukq3")
+clip_text = true
+icon_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -100.0
-offset_right = -41.0
-offset_bottom = -34.0
-grow_horizontal = 0
-grow_vertical = 0
+[connection signal="pressed" from="UI/HBoxContainer/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
+[connection signal="toggled" from="UI/HBoxContainer/HBoxContainer/Sound" to="." method="_on_sound_toggled"]
+[connection signal="pressed" from="UI/HBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]

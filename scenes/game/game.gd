@@ -2,35 +2,22 @@ extends Node2D
 
 var score_player1 = 0
 var score_player2 = 0
-const GAME_TIME = 10.0
+const GAME_TIME = 180.0
 var game_started = false
 
-#@onready var ball_scene = preload("res://scenes/game/objects/football.tscn")
-#var BALL_POSITION
-#const PLAYER1_POSITION = Vector2(234, 440)
-#const PLAYER2_POSiTION = Vector2(879, 440)
+@onready var time_label = $GameMenu/UI/HBoxContainer/TimeLabel
+@onready var score_label = $GameMenu/UI/HBoxContainer/ScoreLabel
+@onready var ball_scene = preload("res://scenes/game/objects/football.tscn")
+@onready var BALL_POSITION =  Vector2(get_viewport().size.x / 2, get_viewport().size.y / 4)
+const PLAYER1_POSITION = Vector2(230, 460)
+const PLAYER2_POSITION = Vector2(922, 460)
 
 
 
 func _ready():
 	set_timer_label(GAME_TIME)
-	await short_pause(1.0)
+	new_round()
 	$GameTimer.start(GAME_TIME)
-	
-	#$Stadium.goal_scored.connect(_on_stadium_goal_scored)
-	#var screen_size = get_viewport().size
-	#BALL_POSITION = Vector2(screen_size.x / 2, screen_size.y / 4)
-	#$Ball.position = BALL_POSITION
-	
-#func _on_stadium_goal_scored(team):
-	#match team:
-		#"1":
-			#$UI/Score1.text = str(int($UI/Score1.text) + 1)
-		#"2":
-			#$UI/Score2.text = str(int($UI/Score2.text) + 1)
-	#$Player1.position = PLAYER1_POSITION
-	#$Player2.position = PLAYER2_POSiTION
-	#$Ball.position = BALL_POSITION
 
 func _process(delta):
 	set_timer_label($GameTimer.time_left)
@@ -47,5 +34,25 @@ func short_pause(seconds):
 	get_tree().paused = false
 
 func set_timer_label(time):
-	var time_label = $GameMenu/UI/VBoxContainer/TimeLabel
-	time_label.text = str(time)
+	var minutes = int(time / 60)
+	var seconds = int(time) % 60
+	var time_str = "%02d:%02d" % [minutes, seconds]
+	time_label.text = str(time_str)
+
+func _on_goal_scored(goalpost):
+	if goalpost == "LeftGoalPost":
+		score_player2 += 1
+	else:
+		score_player1 += 1
+	update_scores()
+	await short_pause(1.0)
+	new_round()
+	
+func new_round():
+	$Player1.position = PLAYER1_POSITION
+	$Player2.position = PLAYER2_POSITION
+	await short_pause(1.0)
+
+func update_scores():
+	var score_str = "%1d:%1d" % [score_player1, score_player2]
+	score_label.text = score_str

@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://h46sc2ncbrw7" path="res://assets/themes/game_theme.tres" id="1_56uud"]
 [ext_resource type="Script" path="res://scenes/menu/character_menu.gd" id="1_mscka"]
 [ext_resource type="Texture2D" uid="uid://b8uj10lquygys" path="res://assets/sprites/buttons/leftarrow.png" id="1_nplth"]
-[ext_resource type="Texture2D" uid="uid://c32pd4je2rmkk" path="res://assets/sprites/grassblock2.png" id="1_tbk6r"]
 [ext_resource type="Texture2D" uid="uid://eip4omcyvlhr" path="res://assets/sprites/buttons/rightarrow.png" id="3_n5b3k"]
+[ext_resource type="Texture2D" uid="uid://c3f10igvg1pls" path="res://assets/sprites/ze33wu45.bmp" id="4_4mne4"]
 [ext_resource type="Texture2D" uid="uid://doaflsnoo14wn" path="res://assets/sprites/buttons/backbutton.png" id="5_fjtwy"]
 [ext_resource type="Texture2D" uid="uid://cydmbfxumvact" path="res://assets/sprites/buttons/playbutton.png" id="6_6dfok"]
 
@@ -39,7 +39,7 @@ icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_tbk6r")
+texture = ExtResource("4_4mne4")
 
 [node name="Button2" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
@@ -71,7 +71,7 @@ icon = ExtResource("1_nplth")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_tbk6r")
+texture = ExtResource("4_4mne4")
 
 [node name="Button2" type="Button" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
