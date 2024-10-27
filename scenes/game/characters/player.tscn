@@ -15,8 +15,8 @@ collision_mask = 5
 slide_on_ceiling = false
 floor_stop_on_slope = false
 floor_constant_speed = true
-floor_max_angle = 0.0872665
-platform_floor_layers = 4294967291
+floor_max_angle = 0.261799
+platform_floor_layers = 4294967041
 script = ExtResource("1_x3h62")
 
 [node name="Sprite" type="Sprite2D" parent="."]

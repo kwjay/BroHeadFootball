@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
-const PUSH_FORCE = 100.0
+const PUSH_FORCE = 150.0
+const SLIDE_FORCE = 50.0
 const FOOT_MAX_ROTATION = -2.5
 const FOOT_RESET_SPEED = 10.0
 const FOOT_KICK_SPEED = 20.0
@@ -54,3 +55,5 @@ func apply_collision_impulse():
 			var collider = slide_collision.get_collider()
 			var collision_normal = slide_collision.get_normal()
 			collider.apply_central_impulse(-collision_normal * PUSH_FORCE)
+			var tangent = Vector2(-collision_normal.y, collision_normal.x)
+			collider.apply_central_impulse(tangent * SLIDE_FORCE * transform.get_scale().x)
