@@ -7,7 +7,7 @@ var game_started = false
 
 @onready var time_label = $GameMenu/UI/HBoxContainer/TimeLabel
 @onready var score_label = $GameMenu/UI/HBoxContainer/ScoreLabel
-@onready var ball_scene = preload("res://scenes/game/objects/football.tscn")
+@onready var ball_scene = $Ball
 @onready var BALL_POSITION =  Vector2(get_viewport().size.x / 2, get_viewport().size.y / 4)
 const PLAYER1_POSITION = Vector2(230, 460)
 const PLAYER2_POSITION = Vector2(922, 460)
@@ -49,6 +49,7 @@ func _on_goal_scored(goalpost):
 	new_round()
 	
 func new_round():
+	ball_scene.stop_and_set_position(BALL_POSITION)
 	$Player1.position = PLAYER1_POSITION
 	$Player2.position = PLAYER2_POSITION
 	await short_pause(1.0)

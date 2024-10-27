@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://rkoyv5puf1ae"]
+[gd_scene load_steps=5 format=3 uid="uid://rkoyv5puf1ae"]
 
+[ext_resource type="Script" path="res://scenes/game/objects/football.gd" id="1_435gm"]
 [ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://assets/sprites/football.png" id="1_gdggo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xp08c"]
@@ -13,6 +14,7 @@ collision_layer = 4
 collision_mask = 7
 mass = 5.0
 physics_material_override = SubResource("PhysicsMaterial_xp08c")
+script = ExtResource("1_435gm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.756863)
