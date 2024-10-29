@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xqk8ympye4bm"]
+[gd_scene load_steps=8 format=3 uid="uid://xqk8ympye4bm"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_gts3p"]
 [ext_resource type="PackedScene" uid="uid://qogh4difjl7u" path="res://scenes/menu/game_menu.tscn" id="2_mffrk"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://scenes/game/objects/football.tscn" id="4_e2add"]
 [ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://scenes/game/objects/goal_post.tscn" id="5_8yau1"]
 [ext_resource type="PackedScene" uid="uid://bj7ne4gk2vm3s" path="res://scenes/game/characters/player.tscn" id="6_nm3aq"]
+[ext_resource type="PackedScene" uid="uid://c8cpi32bhwmbf" path="res://scenes/game/characters/new_player.tscn" id="7_thuf6"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gts3p")
@@ -40,6 +41,9 @@ position = Vector2(230, 460)
 position = Vector2(922, 460)
 scale = Vector2(-1, 1)
 WSAD = true
+
+[node name="Player" parent="." instance=ExtResource("7_thuf6")]
+position = Vector2(451, 392)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="goal_scored" from="LeftGoalPost" to="." method="_on_goal_scored"]

@@ -17,7 +17,6 @@ physics_material_override = SubResource("PhysicsMaterial_xp08c")
 script = ExtResource("1_435gm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0.756863)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("1_gdggo")
 

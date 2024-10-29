@@ -11,7 +11,7 @@ func stop_and_set_position(position:Vector2):
 
 func _integrate_forces(state):
 	if reset_position:
-		reset_position = false
+		reset_position = false 
 		state.linear_velocity = Vector2.ZERO
 		state.angular_velocity = 0
 		state.transform.origin = ball_position
