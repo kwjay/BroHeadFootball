@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://xqk8ympye4bm"]
+[gd_scene load_steps=7 format=3 uid="uid://xqk8ympye4bm"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_gts3p"]
 [ext_resource type="PackedScene" uid="uid://qogh4difjl7u" path="res://scenes/menu/game_menu.tscn" id="2_mffrk"]
 [ext_resource type="PackedScene" uid="uid://dlk70oa00mj0p" path="res://scenes/game/areas/stadium.tscn" id="3_lhkb8"]
 [ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://scenes/game/objects/football.tscn" id="4_e2add"]
 [ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://scenes/game/objects/goal_post.tscn" id="5_8yau1"]
-[ext_resource type="PackedScene" uid="uid://bj7ne4gk2vm3s" path="res://scenes/game/characters/player.tscn" id="6_nm3aq"]
-[ext_resource type="PackedScene" uid="uid://c8cpi32bhwmbf" path="res://scenes/game/characters/new_player.tscn" id="7_thuf6"]
+[ext_resource type="PackedScene" uid="uid://lel2jlu1tpf2" path="res://scenes/game/characters/player.tscn" id="6_nm3aq"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gts3p")
@@ -25,7 +24,7 @@ offset_bottom = 648.0
 [node name="Stadium" parent="." instance=ExtResource("3_lhkb8")]
 
 [node name="Ball" parent="." instance=ExtResource("4_e2add")]
-position = Vector2(549, 41)
+position = Vector2(548, 105)
 
 [node name="LeftGoalPost" parent="." instance=ExtResource("5_8yau1")]
 position = Vector2(50, 307)
@@ -34,16 +33,13 @@ position = Vector2(50, 307)
 position = Vector2(1102, 307)
 scale = Vector2(-1, 1)
 
-[node name="Player1" parent="." instance=ExtResource("6_nm3aq")]
-position = Vector2(230, 460)
-
 [node name="Player2" parent="." instance=ExtResource("6_nm3aq")]
 position = Vector2(922, 460)
 scale = Vector2(-1, 1)
-WSAD = true
+WSAD = false
 
-[node name="Player" parent="." instance=ExtResource("7_thuf6")]
-position = Vector2(451, 392)
+[node name="Player1" parent="." instance=ExtResource("6_nm3aq")]
+position = Vector2(202, 460)
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]
 [connection signal="goal_scored" from="LeftGoalPost" to="." method="_on_goal_scored"]

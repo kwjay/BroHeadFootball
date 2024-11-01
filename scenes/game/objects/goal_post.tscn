@@ -7,10 +7,10 @@ radius = 3.29446
 height = 101.979
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5gwc"]
-size = Vector2(92.2403, 14.7866)
+size = Vector2(99.539, 14.7866)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuxlh"]
-size = Vector2(56, 154)
+size = Vector2(59, 154)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2f16w"]
 size = Vector2(10, 158)
@@ -21,7 +21,7 @@ script = ExtResource("1_nov8v")
 [node name="Crossbar" type="StaticBody2D" parent="."]
 position = Vector2(0, 20)
 rotation = -0.23911
-collision_mask = 5
+collision_mask = 15
 
 [node name="CrossbarCollider" type="CollisionShape2D" parent="Crossbar"]
 position = Vector2(4.33567, -5.11878)
@@ -35,9 +35,15 @@ offset_right = 56.0
 offset_bottom = -2.0
 
 [node name="SweepArea" type="Area2D" parent="Crossbar"]
+position = Vector2(-0.236838, 0.971549)
+collision_layer = 2
+collision_mask = 2
+gravity_point_center = Vector2(1, 0)
+gravity_direction = Vector2(1, 0)
+gravity = 2686.67
 
 [node name="SweepAreaCollider" type="CollisionShape2D" parent="Crossbar/SweepArea"]
-position = Vector2(8.44236, -17.3933)
+position = Vector2(4.79301, -17.3933)
 shape = SubResource("RectangleShape2D_p5gwc")
 
 [node name="Post" type="ColorRect" parent="."]
@@ -48,16 +54,16 @@ offset_bottom = 185.0
 metadata/_edit_use_anchors_ = true
 
 [node name="GoalArea" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 2
+collision_mask = 2
 
 [node name="GoalAreaCollider" type="CollisionShape2D" parent="GoalArea"]
-position = Vector2(4, 109)
+position = Vector2(2.5, 109)
 shape = SubResource("RectangleShape2D_tuxlh")
 
 [node name="InnerPost" type="StaticBody2D" parent="."]
 position = Vector2(-37, 70)
-collision_mask = 5
+collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InnerPost"]
 position = Vector2(-3, 37)
@@ -70,4 +76,5 @@ offset_right = 1.0
 offset_bottom = 116.0
 
 [connection signal="body_entered" from="Crossbar/SweepArea" to="." method="_on_sweep_area_body_entered"]
+[connection signal="body_exited" from="Crossbar/SweepArea" to="." method="_on_sweep_area_body_exited"]
 [connection signal="body_entered" from="GoalArea" to="." method="_on_goal_area_body_entered"]

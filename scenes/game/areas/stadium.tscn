@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlk70oa00mj0p"]
+[gd_scene load_steps=5 format=3 uid="uid://dlk70oa00mj0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
 size = Vector2(64, 526)
@@ -11,14 +11,10 @@ size = Vector2(1281, 70)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbd8s"]
 size = Vector2(1280, 206)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_38spm"]
-size = Vector2(100, 200)
-
 [node name="Stadium" type="Node2D"]
 
 [node name="Walls" type="StaticBody2D" parent="."]
-collision_layer = 5
-collision_mask = 0
+collision_mask = 10
 
 [node name="RightCollider" type="CollisionShape2D" parent="Walls"]
 position = Vector2(1185, 263)
@@ -29,8 +25,7 @@ position = Vector2(-32, 262)
 shape = SubResource("RectangleShape2D_5bfc4")
 
 [node name="Sky" type="StaticBody2D" parent="."]
-collision_layer = 5
-collision_mask = 0
+collision_mask = 10
 
 [node name="UpperCollider" type="CollisionShape2D" parent="Sky"]
 position = Vector2(576.5, -35)
@@ -39,16 +34,10 @@ shape = SubResource("RectangleShape2D_ttip5")
 [node name="Ground" type="StaticBody2D" parent="."]
 z_index = -1
 position = Vector2(600, 640)
-collision_layer = 5
-collision_mask = 0
+collision_mask = 10
 physics_material_override = SubResource("PhysicsMaterial_6i4u0")
 metadata/_edit_group_ = true
 
 [node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
 position = Vector2(-24, -45)
 shape = SubResource("RectangleShape2D_nbd8s")
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground"]
-position = Vector2(-23.0001, -40.5)
-scale = Vector2(12.78, 1.055)
-texture = SubResource("PlaceholderTexture2D_38spm")

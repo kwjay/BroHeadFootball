@@ -7,13 +7,13 @@
 bounce = 0.7
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fsg1i"]
-radius = 16.0
+radius = 17.0
 
 [node name="Ball" type="RigidBody2D"]
-collision_layer = 4
-collision_mask = 7
-mass = 5.0
+collision_layer = 2
+collision_mask = 15
 physics_material_override = SubResource("PhysicsMaterial_xp08c")
+contact_monitor = true
 script = ExtResource("1_435gm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

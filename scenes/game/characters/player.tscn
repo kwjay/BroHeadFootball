@@ -1,58 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj7ne4gk2vm3s"]
+[gd_scene load_steps=6 format=3 uid="uid://lel2jlu1tpf2"]
 
+[ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://assets/sprites/football.png" id="1_ucx6i"]
 [ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
-[ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="2_bnub6"]
+[ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="3_fncsx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_j3rso"]
-radius = 31.0161
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qw3p"]
+radius = 30.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_khoiw"]
-radius = 6.37933
-height = 34.2765
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtwpx"]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 5
-slide_on_ceiling = false
-floor_stop_on_slope = false
-floor_constant_speed = true
-floor_max_angle = 0.261799
+collision_layer = 8
+collision_mask = 11
+floor_max_angle = 0.0174533
 platform_floor_layers = 4294967041
 script = ExtResource("1_x3h62")
 
-[node name="Sprite" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0.537255)
-rotation = 1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_bnub6")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.053, 0.053)
+texture = ExtResource("1_ucx6i")
 
-[node name="CollisionShape" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_j3rso")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8qw3p")
 
 [node name="Foot" type="CharacterBody2D" parent="."]
-disable_mode = 2
-collision_layer = 3
-collision_mask = 4
+collision_layer = 4
+collision_mask = 10
 motion_mode = 1
-platform_on_leave = 2
 platform_floor_layers = 4294967040
 
-[node name="ColorRect" type="ColorRect" parent="Foot"]
-offset_left = -47.0
-offset_top = 26.0
-offset_right = -40.0
-offset_bottom = 63.0
-rotation = -0.715585
-color = Color(0.833705, 0.745641, 0.995211, 0.403922)
-
-[node name="ColorRect2" type="ColorRect" parent="Foot"]
-offset_left = -37.0
-offset_top = 17.0
-offset_right = -12.0
-offset_bottom = 26.0
-rotation = 0.785398
-color = Color(1, 1, 0.294118, 0.372549)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
-position = Vector2(-35, 29)
-rotation = -0.760964
-shape = SubResource("CapsuleShape2D_khoiw")
+position = Vector2(0, 41)
+rotation = 1.65806
+shape = SubResource("CapsuleShape2D_vtwpx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Foot/CollisionShape2D"]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(0.0141044, 0.0211715)
+texture = ExtResource("3_fncsx")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bckep8caud0yn"]
+
+[ext_resource type="PackedScene" uid="uid://dlk70oa00mj0p" path="res://scenes/game/areas/stadium.tscn" id="1_5w1mw"]
+[ext_resource type="PackedScene" uid="uid://rkoyv5puf1ae" path="res://scenes/game/objects/football.tscn" id="2_xiq50"]
+[ext_resource type="PackedScene" uid="uid://lel2jlu1tpf2" path="res://scenes/game/characters/player.tscn" id="3_kw6ok"]
+[ext_resource type="PackedScene" uid="uid://i6bcqweb8ovo" path="res://scenes/game/objects/goal_post.tscn" id="4_0c0qw"]
+
+[node name="Arena" type="Node2D"]
+
+[node name="Stadium" parent="." instance=ExtResource("1_5w1mw")]
+
+[node name="Player" parent="." instance=ExtResource("3_kw6ok")]
+position = Vector2(265, 383)
+
+[node name="Ball" parent="." instance=ExtResource("2_xiq50")]
+position = Vector2(48, 239)
+
+[node name="GoalPost" parent="." instance=ExtResource("4_0c0qw")]
+position = Vector2(55, 307)

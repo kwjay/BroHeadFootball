@@ -76,6 +76,19 @@ icon = ExtResource("4_gukq3")
 clip_text = true
 icon_alignment = 1
 
+[node name="Go" type="Label" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_top = 50.0
+offset_right = 30.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme = ExtResource("1_vo6o6")
+theme_type_variation = &"MatchLabel"
+text = "3"
+
 [connection signal="pressed" from="UI/HBoxContainer/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="toggled" from="UI/HBoxContainer/HBoxContainer/Sound" to="." method="_on_sound_toggled"]
 [connection signal="pressed" from="UI/HBoxContainer/HBoxContainer/Menu" to="." method="_on_menu_pressed"]

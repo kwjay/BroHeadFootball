@@ -102,5 +102,9 @@ layout_mode = 2
 theme = ExtResource("1_56uud")
 icon = ExtResource("6_6dfok")
 
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Button" to="." method="_on_player1_sprite_left"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Button2" to="." method="_on_player1_sprite_right"]
+[connection signal="pressed" from="VBoxContainer2/CenterContainer/HBoxContainer/Button" to="." method="_on_player2_sprite_left"]
+[connection signal="pressed" from="VBoxContainer2/CenterContainer/HBoxContainer/Button2" to="." method="_on_player2_sprite_right"]
 [connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
