@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 [autoload]
 
 GameData="*res://global/game_data.gd"
+SoundFx="*res://global/sound_effects/sound_fx.tscn"
 
 [display]
 

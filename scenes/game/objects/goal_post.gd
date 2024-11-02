@@ -8,9 +8,10 @@ var force_direction = Vector2(scale.x, 0)
 signal goal_scored(goalpost)
 func _on_goal_area_body_entered(body):
 	if body.get_name() == "Ball":
+		$GoalPostSFX/Net.play()
 		emit_signal("goal_scored", self.get_name())
 	
-func _process(delta):
+func _process(_delta):
 	if (ball_instance != null):
 		var current_speed = ball_instance.linear_velocity.length()
 		if current_speed < 50.0:
@@ -19,6 +20,7 @@ func _process(delta):
 
 func _on_sweep_area_body_entered(body):
 	if body.get_name() == "Ball":
+		$GoalPostSFX/CrossbarHit.play()
 		var current_speed = body.linear_velocity.length()
 		if current_speed < VELOCITY_THRESHOLD:
 			ball_instance = body

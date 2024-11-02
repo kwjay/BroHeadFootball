@@ -1,5 +1,8 @@
 extends Control
 
+func _ready():
+	SoundFx.button_sounds(self)
+
 func _on_sound_toggled(toggled_on):
 	pass
 
