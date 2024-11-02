@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -450.0
 const PUSH_FORCE = 150.0
 const HEADER_FORCE = 200.0
 const FOOT_MAX_ROTATION = -1.5
@@ -54,7 +54,8 @@ func apply_collision_impulse():
 		if slide_collision.get_collider() is RigidBody2D:
 			var collider = slide_collision.get_collider()
 			var collision_normal = slide_collision.get_normal()
-			$PlayerSFX/Header.play()
+			if not $PlayerSFX/Header.playing:
+				$PlayerSFX/Header.play()
 			if not is_on_floor() and velocity.y < 0:
 				collider.apply_central_impulse(-collision_normal * (HEADER_FORCE + abs(velocity.y)))
 			else:
@@ -63,4 +64,5 @@ func apply_collision_impulse():
 func _on_ball_entered(body):
 	if body is RigidBody2D:
 		body.apply_central_impulse(KICK_FORCE)
-		$PlayerSFX/Kick.play()
+		if not $PlayerSFX/Kick.playing and not $PlayerSFX/Header.playing:
+			$PlayerSFX/Kick.play()

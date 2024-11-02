@@ -11,8 +11,8 @@ var game_started = false
 @onready var go_label = $GameMenu/UI/Go
 @onready var sfx = $GameSFX
 @onready var BALL_POSITION =  Vector2(get_viewport().size.x / 2, get_viewport().size.y / 4)
-const PLAYER1_POSITION = Vector2(230, 460)
-const PLAYER2_POSITION = Vector2(922, 460)
+const PLAYER1_POSITION = Vector2(230, 433)
+const PLAYER2_POSITION = Vector2(922, 433)
 
 
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsru4b1kfvebt"
-path="res://.godot/imported/football.png-b9b6d327a0c55cbadfe4da5581c847fe.ctex"
+uid="uid://biqiycpct13l3"
+path="res://.godot/imported/Goalpost.png-418f4b5db231729ecbc6bafc34be09d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/football.png"
-dest_files=["res://.godot/imported/football.png-b9b6d327a0c55cbadfe4da5581c847fe.ctex"]
+source_file="res://assets/sprites/Goalpost.png"
+dest_files=["res://.godot/imported/Goalpost.png-418f4b5db231729ecbc6bafc34be09d4.ctex"]
 
 [params]
 

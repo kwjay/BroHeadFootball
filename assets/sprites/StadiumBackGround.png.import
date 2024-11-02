@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfkt2m5n3dahn"
-path="res://.godot/imported/grassblock.png-ee0aa038eae432df86861cf37e13ae57.ctex"
+uid="uid://b8dkxf0sai57n"
+path="res://.godot/imported/StadiumBackGround.png-054854efc82d699614867dad3b146b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/grassblock.png"
-dest_files=["res://.godot/imported/grassblock.png-ee0aa038eae432df86861cf37e13ae57.ctex"]
+source_file="res://assets/sprites/StadiumBackGround.png"
+dest_files=["res://.godot/imported/StadiumBackGround.png-054854efc82d699614867dad3b146b82.ctex"]
 
 [params]
 

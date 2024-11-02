@@ -31,19 +31,21 @@ offset_bottom = 648.0
 position = Vector2(548, 105)
 
 [node name="LeftGoalPost" parent="." instance=ExtResource("5_8yau1")]
-position = Vector2(50, 307)
+z_index = 2
+position = Vector2(71, 373)
 
 [node name="RightGoalPost" parent="." instance=ExtResource("5_8yau1")]
-position = Vector2(1102, 307)
+z_index = 2
+position = Vector2(1083, 373)
 scale = Vector2(-1, 1)
 
 [node name="Player2" parent="." instance=ExtResource("6_nm3aq")]
-position = Vector2(922, 460)
+position = Vector2(922, 433)
 scale = Vector2(-1, 1)
 WSAD = false
 
 [node name="Player1" parent="." instance=ExtResource("6_nm3aq")]
-position = Vector2(202, 460)
+position = Vector2(199, 433)
 
 [node name="GameSFX" type="Node" parent="."]
 process_mode = 3

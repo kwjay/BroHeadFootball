@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://rkoyv5puf1ae"]
 
 [ext_resource type="Script" path="res://scenes/game/objects/football.gd" id="1_435gm"]
-[ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://assets/sprites/football.png" id="1_gdggo"]
+[ext_resource type="Texture2D" uid="uid://dsru4b1kfvebt" path="res://assets/sprites/football.png" id="1_gdggo"]
 [ext_resource type="AudioStream" uid="uid://bstc1fw13ekpc" path="res://assets/sounds/bounce.wav" id="3_nqvyk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xp08c"]
@@ -18,15 +18,15 @@ max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_435gm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
-texture = ExtResource("1_gdggo")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fsg1i")
 
 [node name="Bounce" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_nqvyk")
 volume_db = -8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("1_gdggo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

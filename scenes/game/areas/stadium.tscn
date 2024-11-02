@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlk70oa00mj0p"]
+[gd_scene load_steps=7 format=3 uid="uid://dlk70oa00mj0p"]
+
+[ext_resource type="Texture2D" uid="uid://dkoge6v1m270g" path="res://assets/sprites/StadiumGround.png" id="1_3esgw"]
+[ext_resource type="Texture2D" uid="uid://b8dkxf0sai57n" path="res://assets/sprites/StadiumBackGround.png" id="2_dargs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
 size = Vector2(64, 526)
@@ -33,7 +36,7 @@ shape = SubResource("RectangleShape2D_ttip5")
 
 [node name="Ground" type="StaticBody2D" parent="."]
 z_index = -1
-position = Vector2(600, 640)
+position = Vector2(576, 620)
 collision_mask = 10
 physics_material_override = SubResource("PhysicsMaterial_6i4u0")
 metadata/_edit_group_ = true
@@ -41,3 +44,11 @@ metadata/_edit_group_ = true
 [node name="GoundCollider" type="CollisionShape2D" parent="Ground"]
 position = Vector2(-24, -45)
 shape = SubResource("RectangleShape2D_nbd8s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+texture = ExtResource("1_3esgw")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(566, 208)
+texture = ExtResource("2_dargs")
