@@ -1,13 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://lel2jlu1tpf2"]
+[gd_scene load_steps=11 format=3 uid="uid://lel2jlu1tpf2"]
 
 [ext_resource type="Texture2D" uid="uid://ceye4kan1fsto" path="res://assets/sprites/football.png" id="1_ucx6i"]
 [ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
 [ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="3_fncsx"]
+[ext_resource type="AudioStream" uid="uid://ck00cd0n481b8" path="res://assets/sounds/player/kick.wav" id="4_5h5w8"]
+[ext_resource type="AudioStream" uid="uid://cea6s2b06dquv" path="res://assets/sounds/player/header.wav" id="5_w57jb"]
+[ext_resource type="AudioStream" uid="uid://dexklet2pyydw" path="res://assets/sounds/player/jump.wav" id="6_kkauy"]
+[ext_resource type="AudioStream" uid="uid://du44b1fcrmiux" path="res://assets/sounds/player/landing.wav" id="6_vdf7r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8qw3p"]
 radius = 30.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtwpx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hjuty"]
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 8
@@ -28,6 +34,7 @@ collision_layer = 4
 collision_mask = 10
 motion_mode = 1
 platform_floor_layers = 4294967040
+platform_wall_layers = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
 position = Vector2(0, 41)
@@ -38,3 +45,28 @@ shape = SubResource("CapsuleShape2D_vtwpx")
 position = Vector2(0, -4.76837e-07)
 scale = Vector2(0.0141044, 0.0211715)
 texture = ExtResource("3_fncsx")
+
+[node name="Area2D" type="Area2D" parent="Foot"]
+position = Vector2(0, 41)
+rotation = 1.65806
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foot/Area2D"]
+shape = SubResource("CapsuleShape2D_hjuty")
+
+[node name="PlayerSFX" type="Node" parent="."]
+
+[node name="Kick" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("4_5h5w8")
+
+[node name="Header" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("5_w57jb")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("6_kkauy")
+
+[node name="Landing" type="AudioStreamPlayer2D" parent="PlayerSFX"]
+stream = ExtResource("6_vdf7r")
+
+[connection signal="body_entered" from="Foot/Area2D" to="." method="_on_ball_entered"]

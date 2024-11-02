@@ -2,9 +2,9 @@ extends Node2D
 
 var score_player1 = 0
 var score_player2 = 0
-var game_time = GameData.game_time
 var game_started = false
 
+@onready var game_time = GameData.game_time
 @onready var time_label = $GameMenu/UI/HBoxContainer/TimeLabel
 @onready var score_label = $GameMenu/UI/HBoxContainer/ScoreLabel
 @onready var ball_scene = $Ball

@@ -13,4 +13,4 @@ stream = ExtResource("2_u3ns7")
 
 [node name="Crowd" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_jn0gr")
-volume_db = 2.0
+volume_db = -8.0

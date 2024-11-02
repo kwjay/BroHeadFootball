@@ -16,3 +16,8 @@ func _integrate_forces(state):
 		state.angular_velocity = 0
 		state.transform.origin = ball_position
 
+
+
+func _on_body_entered(body):
+	if not body is CharacterBody2D and not $Bounce.playing:
+		$Bounce.play()
