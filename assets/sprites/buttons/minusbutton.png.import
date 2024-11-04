@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2fmyfli8d5hw"
-path="res://.godot/imported/sports_heads_football_championship_flash_screenshot.jpg-c8589c5fe796a4ea504e0c597d805883.ctex"
+uid="uid://8cchn46x1xaj"
+path="res://.godot/imported/minusbutton.png-9940946c8ef4ae45e122de58806690d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game/characters/sports_heads_football_championship_flash_screenshot.jpg"
-dest_files=["res://.godot/imported/sports_heads_football_championship_flash_screenshot.jpg-c8589c5fe796a4ea504e0c597d805883.ctex"]
+source_file="res://assets/sprites/buttons/minusbutton.png"
+dest_files=["res://.godot/imported/minusbutton.png-9940946c8ef4ae45e122de58806690d0.ctex"]
 
 [params]
 

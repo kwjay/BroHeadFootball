@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dlk70oa00mj0p"]
 
-[ext_resource type="Texture2D" uid="uid://dkoge6v1m270g" path="res://assets/sprites/StadiumGround.png" id="1_3esgw"]
+[ext_resource type="Texture2D" uid="uid://denrrqw6n2jst" path="res://scenes/game/objects/StadiumGround.png" id="1_a858f"]
 [ext_resource type="Texture2D" uid="uid://b8dkxf0sai57n" path="res://assets/sprites/StadiumBackGround.png" id="2_dargs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bfc4"]
@@ -46,9 +46,9 @@ position = Vector2(-24, -45)
 shape = SubResource("RectangleShape2D_nbd8s")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
-texture = ExtResource("1_3esgw")
+texture = ExtResource("1_a858f")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -100
-position = Vector2(566, 208)
+position = Vector2(570, 226)
 texture = ExtResource("2_dargs")

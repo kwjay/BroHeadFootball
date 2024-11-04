@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpngqqe22p121"]
+[gd_scene load_steps=11 format=3 uid="uid://cpngqqe22p121"]
 
 [ext_resource type="Theme" uid="uid://h46sc2ncbrw7" path="res://assets/themes/game_theme.tres" id="1_56uud"]
 [ext_resource type="Script" path="res://scenes/menu/character_menu.gd" id="1_mscka"]
 [ext_resource type="Texture2D" uid="uid://b8uj10lquygys" path="res://assets/sprites/buttons/leftarrow.png" id="1_nplth"]
 [ext_resource type="Texture2D" uid="uid://eip4omcyvlhr" path="res://assets/sprites/buttons/rightarrow.png" id="3_n5b3k"]
-[ext_resource type="Texture2D" uid="uid://c3f10igvg1pls" path="res://assets/sprites/ze33wu45.bmp" id="4_4mne4"]
+[ext_resource type="Texture2D" uid="uid://cgsmb6j2em40e" path="res://assets/sprites/characters/JacobSprite.png" id="4_ridem"]
 [ext_resource type="Texture2D" uid="uid://doaflsnoo14wn" path="res://assets/sprites/buttons/backbutton.png" id="5_fjtwy"]
 [ext_resource type="Texture2D" uid="uid://cydmbfxumvact" path="res://assets/sprites/buttons/playbutton.png" id="6_6dfok"]
+[ext_resource type="Texture2D" uid="uid://8cchn46x1xaj" path="res://assets/sprites/buttons/minusbutton.png" id="8_q663i"]
+[ext_resource type="Texture2D" uid="uid://d1r5ph1ofhrll" path="res://assets/sprites/buttons/plusbutton.png" id="9_7q2mg"]
+[ext_resource type="Texture2D" uid="uid://b8dkxf0sai57n" path="res://assets/sprites/StadiumBackGround.png" id="10_nhcfo"]
 
 [node name="CharacterMenu" type="Control"]
 layout_mode = 3
@@ -16,6 +19,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mscka")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+clip_children = 2
+layout_mode = 0
+offset_left = -31.0
+offset_top = -48.0
+offset_right = 1169.0
+offset_bottom = 652.0
+texture = ExtResource("10_nhcfo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -39,7 +51,8 @@ icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_4mne4")
+texture = ExtResource("4_ridem")
+expand_mode = 2
 
 [node name="Button2" type="Button" parent="VBoxContainer/CenterContainer/HBoxContainer"]
 layout_mode = 2
@@ -71,7 +84,8 @@ icon = ExtResource("1_nplth")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("4_4mne4")
+texture = ExtResource("4_ridem")
+expand_mode = 2
 
 [node name="Button2" type="Button" parent="VBoxContainer2/CenterContainer/HBoxContainer"]
 layout_mode = 2
@@ -102,9 +116,42 @@ layout_mode = 2
 theme = ExtResource("1_56uud")
 icon = ExtResource("6_6dfok")
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -302.0
+offset_top = 12.0
+offset_right = 302.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Minus" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_56uud")
+theme_type_variation = &"GameMenuButtons"
+icon = ExtResource("8_q663i")
+
+[node name="Time" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_56uud")
+text = "00:00"
+
+[node name="Plus" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_56uud")
+theme_type_variation = &"GameMenuButtons"
+icon = ExtResource("9_7q2mg")
+
 [connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Button" to="." method="_on_player1_sprite_left"]
 [connection signal="pressed" from="VBoxContainer/CenterContainer/HBoxContainer/Button2" to="." method="_on_player1_sprite_right"]
 [connection signal="pressed" from="VBoxContainer2/CenterContainer/HBoxContainer/Button" to="." method="_on_player2_sprite_left"]
 [connection signal="pressed" from="VBoxContainer2/CenterContainer/HBoxContainer/Button2" to="." method="_on_player2_sprite_right"]
 [connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="HBoxContainer2/Plus" to="." method="_on_plus_pressed"]

@@ -28,7 +28,7 @@ offset_bottom = 648.0
 [node name="Stadium" parent="." instance=ExtResource("3_lhkb8")]
 
 [node name="Ball" parent="." instance=ExtResource("4_e2add")]
-position = Vector2(548, 105)
+position = Vector2(576, 130)
 
 [node name="LeftGoalPost" parent="." instance=ExtResource("5_8yau1")]
 z_index = 2

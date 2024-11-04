@@ -10,7 +10,7 @@ var game_started = false
 @onready var ball_scene = $Ball
 @onready var go_label = $GameMenu/UI/Go
 @onready var sfx = $GameSFX
-@onready var BALL_POSITION =  Vector2(get_viewport().size.x / 2, get_viewport().size.y / 4)
+const BALL_POSITION =  Vector2(576, 130)
 const PLAYER1_POSITION = Vector2(230, 433)
 const PLAYER2_POSITION = Vector2(922, 433)
 
@@ -55,10 +55,10 @@ func _on_goal_scored(goalpost):
 		player_name = $Player1.name
 		score_player1 += 1
 	sfx.crowd_goal_scored.play()
+	await get_tree().create_timer(0.5).timeout
 	update_scores()
 	go_label.visible = true
 	go_label.text = player_name + " scored"
-	await short_pause(1.0)
 	go_label.visible = false
 	new_round()
 	
