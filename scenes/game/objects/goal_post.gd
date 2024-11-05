@@ -4,7 +4,7 @@ const PUSH_FORCE = 150.0
 const VELOCITY_THRESHOLD = 400.0
 
 var ball_instance
-var force_direction = Vector2(scale.x, 0)
+@onready var force_direction = Vector2(scale.x, 0)
 signal goal_scored(goalpost)
 func _on_goal_area_body_entered(body):
 	if body.get_name() == "Ball":

@@ -10,7 +10,7 @@ radius = 4.0
 height = 138.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5gwc"]
-size = Vector2(130, 11)
+size = Vector2(138, 18.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuxlh"]
 size = Vector2(103, 173)
@@ -37,7 +37,7 @@ gravity_direction = Vector2(1, 0)
 gravity = 2686.67
 
 [node name="SweepAreaCollider" type="CollisionShape2D" parent="Crossbar/SweepArea"]
-position = Vector2(-4, -106)
+position = Vector2(-8, -109.75)
 shape = SubResource("RectangleShape2D_p5gwc")
 
 [node name="GoalArea" type="Area2D" parent="."]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
 [ext_resource type="Texture2D" uid="uid://cgsmb6j2em40e" path="res://assets/sprites/characters/JacobSprite.png" id="2_gg2k7"]
-[ext_resource type="Texture2D" uid="uid://dbhni72unq5pi" path="res://assets/sprites/basket-ball.png" id="3_fncsx"]
+[ext_resource type="Texture2D" uid="uid://8cr6xyce52j3" path="res://assets/sprites/foot.png" id="3_oi20j"]
 [ext_resource type="AudioStream" uid="uid://ck00cd0n481b8" path="res://assets/sounds/player/kick.wav" id="4_5h5w8"]
 [ext_resource type="AudioStream" uid="uid://cea6s2b06dquv" path="res://assets/sounds/player/header.wav" id="5_w57jb"]
 [ext_resource type="AudioStream" uid="uid://dexklet2pyydw" path="res://assets/sounds/player/jump.wav" id="6_kkauy"]
@@ -37,17 +37,18 @@ platform_floor_layers = 4294967040
 platform_wall_layers = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
-position = Vector2(-5, 45)
+position = Vector2(-20, 44)
 rotation = 1.8326
 shape = SubResource("CapsuleShape2D_vtwpx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Foot/CollisionShape2D"]
 position = Vector2(0, -4.76837e-07)
-scale = Vector2(0.0141044, 0.0211715)
-texture = ExtResource("3_fncsx")
+rotation = -1.5708
+scale = Vector2(-1, 1)
+texture = ExtResource("3_oi20j")
 
 [node name="Area2D" type="Area2D" parent="Foot"]
-position = Vector2(-5, 45)
+position = Vector2(-20, 44)
 rotation = 1.8326
 collision_layer = 2
 collision_mask = 2
