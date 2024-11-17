@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://denrrqw6n2jst"
-path="res://.godot/imported/StadiumGround.png-a0c77b45aca129eadd323fb15f7d8569.ctex"
+uid="uid://bqvn8m01u0pd7"
+path="res://.godot/imported/BatroszSprite.png-09e1e4a33d80947d87af5ff0921be394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/game/objects/StadiumGround.png"
-dest_files=["res://.godot/imported/StadiumGround.png-a0c77b45aca129eadd323fb15f7d8569.ctex"]
+source_file="res://assets/sprites/characters/BatroszSprite.png"
+dest_files=["res://.godot/imported/BatroszSprite.png-09e1e4a33d80947d87af5ff0921be394.ctex"]
 
 [params]
 

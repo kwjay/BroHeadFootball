@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8cr6xyce52j3"
-path="res://.godot/imported/foot.png-5591ef43712d4536fe79af512036b96c.ctex"
+uid="uid://cf2lrxdtlue1o"
+path="res://.godot/imported/LeonSprite.png-4d4a0b995921109f31fdddf611e80b38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/foot.png"
-dest_files=["res://.godot/imported/foot.png-5591ef43712d4536fe79af512036b96c.ctex"]
+source_file="res://assets/sprites/characters/LeonSprite.png"
+dest_files=["res://.godot/imported/LeonSprite.png-4d4a0b995921109f31fdddf611e80b38.ctex"]
 
 [params]
 

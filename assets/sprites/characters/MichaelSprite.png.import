@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0el18nnuil5q"
-path="res://.godot/imported/StadiumGround.png-8b095d4e5d7f20bd31444c0c47820480.ctex"
+uid="uid://cq0tutbo88np1"
+path="res://.godot/imported/MichaelSprite.png-531c4929fcbc18f628ae916e2a813ace.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/StadiumGround.png"
-dest_files=["res://.godot/imported/StadiumGround.png-8b095d4e5d7f20bd31444c0c47820480.ctex"]
+source_file="res://assets/sprites/characters/MichaelSprite.png"
+dest_files=["res://.godot/imported/MichaelSprite.png-531c4929fcbc18f628ae916e2a813ace.ctex"]
 
 [params]
 

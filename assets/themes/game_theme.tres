@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://h46sc2ncbrw7"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://h46sc2ncbrw7"]
 
 [ext_resource type="FontFile" uid="uid://dmgebvfbnnmm5" path="res://assets/fonts/prstart.ttf" id="2_dqkle"]
+[ext_resource type="FontFile" uid="uid://cmgvvs0vojsfi" path="res://assets/fonts/ka1.ttf" id="3_2mqns"]
 [ext_resource type="Texture2D" uid="uid://dqpy4oyy8ppr6" path="res://assets/sprites/buttons/menuframe.png" id="3_oneus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3klie"]
@@ -66,3 +67,5 @@ Label/styles/normal = SubResource("StyleBoxTexture_ll5lv")
 MatchLabel/base_type = &"Label"
 MatchLabel/fonts/font = ExtResource("2_dqkle")
 MatchLabel/styles/normal = SubResource("StyleBoxEmpty_am2tl")
+logoLabel/base_type = &"Label"
+logoLabel/fonts/font = ExtResource("3_2mqns")

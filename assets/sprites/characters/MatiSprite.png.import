@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5ib4d4wcxj14"
-path="res://.godot/imported/american-football.png-931ec4cbc46f16bb8aa5abd82256b202.ctex"
+uid="uid://4td7u4n0tlao"
+path="res://.godot/imported/MatiSprite.png-b27edacf0dac83639145ca212b67d87f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/american-football.png"
-dest_files=["res://.godot/imported/american-football.png-931ec4cbc46f16bb8aa5abd82256b202.ctex"]
+source_file="res://assets/sprites/characters/MatiSprite.png"
+dest_files=["res://.godot/imported/MatiSprite.png-b27edacf0dac83639145ca212b67d87f.ctex"]
 
 [params]
 

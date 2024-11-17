@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbhni72unq5pi"
-path="res://.godot/imported/basket-ball.png-07394ef6dd0570f0fdde01faeca7cfd5.ctex"
+uid="uid://g0khx31e5mmo"
+path="res://.godot/imported/FilipSprite.png-ff2508130e6df9a7c2e231fe09f47c86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/basket-ball.png"
-dest_files=["res://.godot/imported/basket-ball.png-07394ef6dd0570f0fdde01faeca7cfd5.ctex"]
+source_file="res://assets/sprites/characters/FilipSprite.png"
+dest_files=["res://.godot/imported/FilipSprite.png-ff2508130e6df9a7c2e231fe09f47c86.ctex"]
 
 [params]
 

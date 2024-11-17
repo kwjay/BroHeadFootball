@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3f10igvg1pls"
-path="res://.godot/imported/ze33wu45.bmp-f4386d5062d794030ed0f381aa5fbf6e.ctex"
+uid="uid://c7oyf30vgn5xk"
+path="res://.godot/imported/OlafSprite.png-960a00e2d4886287c932f80a41e6332e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ze33wu45.bmp"
-dest_files=["res://.godot/imported/ze33wu45.bmp-f4386d5062d794030ed0f381aa5fbf6e.ctex"]
+source_file="res://assets/sprites/characters/OlafSprite.png"
+dest_files=["res://.godot/imported/OlafSprite.png-960a00e2d4886287c932f80a41e6332e.ctex"]
 
 [params]
 

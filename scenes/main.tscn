@@ -1,18 +1,101 @@
-[gd_scene load_steps=3 format=3 uid="uid://23bt6dfvu3sm"]
+[gd_scene load_steps=14 format=3 uid="uid://23bt6dfvu3sm"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_n43tj"]
+[ext_resource type="Texture2D" uid="uid://b8dkxf0sai57n" path="res://assets/sprites/StadiumBackGround.png" id="2_hfgfw"]
 [ext_resource type="PackedScene" uid="uid://coysd2ym3lpi0" path="res://scenes/menu/menu.tscn" id="2_qs4lb"]
+[ext_resource type="Texture2D" uid="uid://pkfsjsyyw7kk" path="res://assets/sprites/buttons/Logo.png" id="3_w0pe4"]
+[ext_resource type="Texture2D" uid="uid://cgsmb6j2em40e" path="res://assets/sprites/characters/JacobSprite.png" id="3_y440s"]
+[ext_resource type="Texture2D" uid="uid://cq0tutbo88np1" path="res://assets/sprites/characters/MichaelSprite.png" id="6_nl7o5"]
+[ext_resource type="Texture2D" uid="uid://bavlddi7k17qc" path="res://assets/sprites/characters/AlanSprite.png" id="7_gouwi"]
+[ext_resource type="Texture2D" uid="uid://bpirqqtkvmj48" path="res://assets/sprites/characters/DOPSprite.png" id="8_2fg0d"]
+[ext_resource type="Texture2D" uid="uid://g0khx31e5mmo" path="res://assets/sprites/characters/FilipSprite.png" id="9_ttlai"]
+[ext_resource type="Texture2D" uid="uid://cf2lrxdtlue1o" path="res://assets/sprites/characters/LeonSprite.png" id="10_lseh2"]
+[ext_resource type="Texture2D" uid="uid://4td7u4n0tlao" path="res://assets/sprites/characters/MatiSprite.png" id="11_21lw4"]
+[ext_resource type="Texture2D" uid="uid://c7oyf30vgn5xk" path="res://assets/sprites/characters/OlafSprite.png" id="12_c387q"]
+[ext_resource type="Texture2D" uid="uid://bqvn8m01u0pd7" path="res://assets/sprites/characters/BatroszSprite.png" id="13_qfmfu"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_n43tj")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 1175.0
+offset_bottom = 675.0
+texture = ExtResource("2_hfgfw")
+
+[node name="Logo" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 208.0
+offset_top = 65.0
+offset_right = 943.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_w0pe4")
 
 [node name="Menu" parent="." instance=ExtResource("2_qs4lb")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 576.0
-offset_top = 430.0
+offset_top = 450.0
 offset_right = 576.0
-offset_bottom = 430.0
+offset_bottom = 450.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Heads" type="Node2D" parent="."]
+
+[node name="JacobSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(197, 207)
+rotation = -0.174533
+texture = ExtResource("3_y440s")
+
+[node name="MichaelSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(935, 129)
+rotation = -2.98102
+scale = Vector2(1, -1)
+texture = ExtResource("6_nl7o5")
+
+[node name="AlanSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(217, 113)
+rotation = 0.16057
+texture = ExtResource("7_gouwi")
+
+[node name="DopSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(934, 209)
+rotation = 2.98102
+scale = Vector2(1, -1)
+texture = ExtResource("8_2fg0d")
+
+[node name="FilipSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(1017, 176)
+rotation = -2.98102
+scale = Vector2(1, -1)
+texture = ExtResource("9_ttlai")
+
+[node name="LeonSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(124, 150)
+texture = ExtResource("10_lseh2")
+
+[node name="MatiSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(1030, 90)
+rotation = 3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("11_21lw4")
+
+[node name="OlafSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(81, 228)
+rotation = -0.16057
+texture = ExtResource("12_c387q")
+
+[node name="BatroszSprite" type="Sprite2D" parent="Heads"]
+position = Vector2(136, 72)
+rotation = 0.16057
+texture = ExtResource("13_qfmfu")

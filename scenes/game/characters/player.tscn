@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/game/characters/player.gd" id="1_x3h62"]
 [ext_resource type="Texture2D" uid="uid://cgsmb6j2em40e" path="res://assets/sprites/characters/JacobSprite.png" id="2_gg2k7"]
-[ext_resource type="Texture2D" uid="uid://8cr6xyce52j3" path="res://assets/sprites/foot.png" id="3_oi20j"]
+[ext_resource type="Texture2D" uid="uid://8cr6xyce52j3" path="res://assets/sprites/boots/foot.png" id="3_oi20j"]
 [ext_resource type="AudioStream" uid="uid://ck00cd0n481b8" path="res://assets/sounds/player/kick.wav" id="4_5h5w8"]
 [ext_resource type="AudioStream" uid="uid://cea6s2b06dquv" path="res://assets/sounds/player/header.wav" id="5_w57jb"]
 [ext_resource type="AudioStream" uid="uid://dexklet2pyydw" path="res://assets/sounds/player/jump.wav" id="6_kkauy"]

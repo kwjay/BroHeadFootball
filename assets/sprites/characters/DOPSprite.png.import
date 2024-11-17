@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xjw3wkcst0q2"
-path="res://.godot/imported/JacobSprite.png-319a40f1735d0c35279f2809f431cad1.ctex"
+uid="uid://bpirqqtkvmj48"
+path="res://.godot/imported/DOPSprite.png-d737d329322c97418f8baf828de11763.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/menu/JacobSprite.png"
-dest_files=["res://.godot/imported/JacobSprite.png-319a40f1735d0c35279f2809f431cad1.ctex"]
+source_file="res://assets/sprites/characters/DOPSprite.png"
+dest_files=["res://.godot/imported/DOPSprite.png-d737d329322c97418f8baf828de11763.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2fmyfli8d5hw"
-path="res://.godot/imported/sports_heads_football_championship_flash_screenshot.jpg-17c45985ba0c06082496c2f6c945c91a.ctex"
+uid="uid://dkomf0q526dm6"
+path="res://.godot/imported/Mati1Sprite.png-4f83bbdac56dcc384c313d3e585f0164.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sports_heads_football_championship_flash_screenshot.jpg"
-dest_files=["res://.godot/imported/sports_heads_football_championship_flash_screenshot.jpg-17c45985ba0c06082496c2f6c945c91a.ctex"]
+source_file="res://assets/sprites/characters/Mati1Sprite.png"
+dest_files=["res://.godot/imported/Mati1Sprite.png-4f83bbdac56dcc384c313d3e585f0164.ctex"]
 
 [params]
 

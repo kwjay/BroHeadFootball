@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0el18nnuil5q"
-path="res://.godot/imported/StadiumGround.png-8b095d4e5d7f20bd31444c0c47820480.ctex"
+uid="uid://8cr6xyce52j3"
+path="res://.godot/imported/foot.png-0c10b35b7d96f4ecbb732017ea4bc46f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/StadiumGround.png"
-dest_files=["res://.godot/imported/StadiumGround.png-8b095d4e5d7f20bd31444c0c47820480.ctex"]
+source_file="res://assets/sprites/boots/foot.png"
+dest_files=["res://.godot/imported/foot.png-0c10b35b7d96f4ecbb732017ea4bc46f.ctex"]
 
 [params]
 

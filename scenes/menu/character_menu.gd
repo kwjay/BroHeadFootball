@@ -2,8 +2,27 @@ extends Control
 
 var game_time = 90
 @onready var time_label = $HBoxContainer2/Time
+@onready var character_sprites = [] 
+const SPRITES_PATH = "res://assets/sprites/characters/"
+@onready var player1_sprite = $VBoxContainer/CenterContainer/HBoxContainer/Player1
+@onready var player2_sprite = $VBoxContainer2/CenterContainer/HBoxContainer/Player2
+var player1_choice = 0
+var player2_choice = 1
 
 func _ready():
+	var dir = DirAccess.open(SPRITES_PATH)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if file_name.ends_with(".png"):
+				var sprite_path = SPRITES_PATH + file_name
+				var texture = load(sprite_path)  # Load the texture
+				character_sprites.append(texture)
+			file_name = dir.get_next()
+	dir.list_dir_end()
+	player1_sprite.texture = character_sprites[player1_choice]
+	player2_sprite.texture = character_sprites[player2_choice]
 	SoundFx.button_sounds(self)
 	update_time_label()
 
@@ -18,18 +37,21 @@ func _on_play_pressed():
 
 
 func _on_player1_sprite_right():
-	pass
+	player1_choice = (player1_choice + 1) % character_sprites.size()  # Increment and wrap
+	player1_sprite.texture = character_sprites[player1_choice]
 
 func _on_player1_sprite_left():
-	pass
+	player1_choice = (player1_choice - 1 + character_sprites.size()) % character_sprites.size()
+	player1_sprite.texture = character_sprites[player1_choice]
 
 func _on_player2_sprite_left():
-	pass
+	player2_choice = (player2_choice + 1) % character_sprites.size()  # Increment and wrap
+	player2_sprite.texture = character_sprites[player2_choice]
 
 
 func _on_player2_sprite_right():
-	pass
-
+	player2_choice = (player2_choice - 1 + character_sprites.size()) % character_sprites.size()
+	player2_sprite.texture = character_sprites[player2_choice]
 
 func update_time_label():
 	var minutes = int(game_time / 60)
