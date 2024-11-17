@@ -21,6 +21,14 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 		}
 var landing_sfx = false
 
+func _ready():
+	if WSAD:
+		$Sprite2D.texture = GameData.player2_sprite
+	else:
+		$Sprite2D.texture = GameData.player1_sprite
+	if GameData.bonus:
+		$Foot/CollisionShape2D/Sprite2D.texture = load("res://assets/sprites/boots/merc.png")
+
 func _physics_process(delta):
 	if not is_on_floor():
 		landing_sfx = true

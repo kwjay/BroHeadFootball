@@ -10,6 +10,7 @@ var player1_choice = 0
 var player2_choice = 1
 
 func _ready():
+	GameData.bonus = false
 	var dir = DirAccess.open(SPRITES_PATH)
 	if dir:
 		dir.list_dir_begin()
@@ -31,8 +32,8 @@ func _on_back_pressed():
 
 func _on_play_pressed():
 	GameData.game_time = game_time
-	GameData.player1_sprite = ""
-	GameData.player2_sptite = ""
+	GameData.player1_sprite = character_sprites[player1_choice]
+	GameData.player2_sprite = character_sprites[player2_choice]
 	get_tree().change_scene_to_file("res://scenes/game/game.tscn")
 
 
@@ -70,3 +71,7 @@ func _on_plus_pressed():
 	if game_time <= 180:
 		game_time += 30
 	update_time_label()
+
+
+func _on_bonus_toggled(toggled_on):
+	GameData.bonus = toggled_on

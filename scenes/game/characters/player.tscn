@@ -23,7 +23,6 @@ platform_floor_layers = 4294967041
 script = ExtResource("1_x3h62")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3, 0)
 texture = ExtResource("2_gg2k7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -37,9 +36,10 @@ platform_floor_layers = 4294967040
 platform_wall_layers = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot"]
-position = Vector2(-20, 44)
+position = Vector2(-19, 41)
 rotation = 1.8326
 shape = SubResource("CapsuleShape2D_vtwpx")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Foot/CollisionShape2D"]
 position = Vector2(0, -4.76837e-07)
@@ -48,10 +48,11 @@ scale = Vector2(-1, 1)
 texture = ExtResource("3_oi20j")
 
 [node name="Area2D" type="Area2D" parent="Foot"]
-position = Vector2(-20, 44)
+position = Vector2(-19, 41)
 rotation = 1.8326
 collision_layer = 2
 collision_mask = 2
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foot/Area2D"]
 shape = SubResource("CapsuleShape2D_hjuty")
