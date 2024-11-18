@@ -11,8 +11,8 @@ var game_started = false
 @onready var go_label = $GameMenu/UI/Go
 @onready var sfx = $GameSFX
 const BALL_POSITION =  Vector2(576, 130)
-const PLAYER1_POSITION = Vector2(230, 433)
-const PLAYER2_POSITION = Vector2(922, 433)
+const PLAYER1_POSITION = Vector2(230, 440)
+const PLAYER2_POSITION = Vector2(922, 440)
 
 
 

@@ -45,7 +45,7 @@ scale = Vector2(-1, 1)
 WSAD = false
 
 [node name="Player1" parent="." instance=ExtResource("6_nm3aq")]
-position = Vector2(199, 433)
+position = Vector2(199, 435)
 
 [node name="GameSFX" type="Node" parent="."]
 process_mode = 3
