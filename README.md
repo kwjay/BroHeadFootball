@@ -18,23 +18,7 @@
 ## Game Mechanics
 The game revolves around 1v1 football matches where players control characters to score goals against their opponent. Core mechanics include movement, jumping, and kicking the ball. Each player has a unique set of controls.
 
-- ## Player Movement:
-
-### Player 1 Controls
-| Action         | Key           |
-|----------------|---------------|
-| **Jump**       | ↑             |
-| **Move Left**  | ←             |
-| **Move Right** | →             |
-| **Kick**       | Space         |
-
-### Player 2 Controls
-| Action         | Key           |
-|----------------|---------------|
-| **Jump**       | W             |
-| **Move Left**  | A             |
-| **Move Right** | D             |
-| **Kick**       | /             |
+- **Player Movement**: Player can move right, left, jump and is able to kick.
 
 - **Objective**: Score more goals than your opponent within the time limit.
 
