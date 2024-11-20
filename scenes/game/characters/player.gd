@@ -23,9 +23,9 @@ var landing_sfx = false
 
 func _ready():
 	if WSAD:
-		$Sprite2D.texture = GameData.player2_sprite
-	else:
 		$Sprite2D.texture = GameData.player1_sprite
+	else:
+		$Sprite2D.texture = GameData.player2_sprite
 	if GameData.bonus:
 		$Foot/CollisionShape2D/Sprite2D.texture = load("res://assets/sprites/boots/merc.png")
 
