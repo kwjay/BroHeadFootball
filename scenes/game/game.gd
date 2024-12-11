@@ -20,6 +20,7 @@ func _ready():
 	set_timer_label(game_time)
 	new_round()
 	$GameTimer.start(game_time)
+	SoundFx.play_music(1)
 
 func _process(_delta):
 	set_timer_label($GameTimer.time_left)
@@ -32,6 +33,7 @@ func _on_game_timer_timeout():
 	go_label.text = str(score_player1) + ":" + str(score_player2)
 	await short_pause(2.0)
 	go_label.visible = false
+	SoundFx.stop_track(1)
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 	

@@ -4,7 +4,10 @@ func _ready():
 	SoundFx.button_sounds(self)
 
 func _on_sound_toggled(toggled_on):
-	pass
+	if toggled_on:
+		SoundFx.stop_track(1)
+	else:
+		SoundFx.play_music(1)
 
 
 func _on_menu_pressed():

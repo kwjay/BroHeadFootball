@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3vrcefwi41yq"]
+[gd_scene load_steps=6 format=3 uid="uid://c3vrcefwi41yq"]
 
 [ext_resource type="Script" path="res://global/sound_effects/sound_fx.gd" id="1_ans62"]
 [ext_resource type="AudioStream" uid="uid://dhpm6d724ah02" path="res://assets/sounds/UI_Click.wav" id="2_u3ns7"]
 [ext_resource type="AudioStream" uid="uid://dcy77qu7tw018" path="res://assets/sounds/idle_crowd.wav" id="3_jn0gr"]
+[ext_resource type="AudioStream" uid="uid://bxpalnksxgry7" path="res://assets/music/menu.wav" id="4_vq38x"]
+[ext_resource type="AudioStream" uid="uid://dohbktbrsuffo" path="res://assets/music/game.wav" id="5_ipcbt"]
 
 [node name="SoundFx" type="Node"]
 process_mode = 3
@@ -14,3 +16,11 @@ stream = ExtResource("2_u3ns7")
 [node name="Crowd" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_jn0gr")
 volume_db = -8.0
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vq38x")
+volume_db = -17.333
+
+[node name="GameMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ipcbt")
+volume_db = -34.667

@@ -34,7 +34,9 @@ func _on_play_pressed():
 	GameData.game_time = game_time
 	GameData.player1_sprite = character_sprites[player1_choice]
 	GameData.player2_sprite = character_sprites[player2_choice]
+	SoundFx.stop_track(0)
 	get_tree().change_scene_to_file("res://scenes/game/game.tscn")
+	
 
 
 func _on_player1_sprite_right():
