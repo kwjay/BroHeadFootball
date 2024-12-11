@@ -1,4 +1,5 @@
 # Bro Head Football
+In primary school, my friends and I used to play a game called Sports Heads Football whenever we had free time on the school computers. Inspired by those memories, I decided to recreate the game, incorporating our faces while capturing a similar vibe to the original.
 
 ## Table of Contents
 1. [Overview](#overview)
